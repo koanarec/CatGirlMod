@@ -1,0 +1,4 @@
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\catgirls\Assemblies\CatGirlMod.dll
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\catgirls\Source\CatGirlMod\obj\Debug\CatGirlMod.csproj.AssemblyReference.cache
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\catgirls\Source\CatGirlMod\obj\Debug\CatGirlMod.csproj.CoreCompileInputs.cache
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\catgirls\Source\CatGirlMod\obj\Debug\CatGirlMod.dll

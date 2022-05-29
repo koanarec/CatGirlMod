@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- ====================================================== -->  
+
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>CatGirl</defName>
+		<label>Cat Girl</label>
+		<description>Smol Cat girl</description>
+		<statBases>
+			<MoveSpeed>7.5</MoveSpeed>
+			<ComfyTemperatureMin>10</ComfyTemperatureMin>
+			<ComfyTemperatureMax>35</ComfyTemperatureMax>
+			<MarketValue>1000</MarketValue>
+		</statBases>
+		<tools>
+			<li>
+				<label>left claw</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>11</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right claw</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>11</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.7</chanceFactor>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>11</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>7</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<trainability>Advanced</trainability>
+			<body>QuadrupedAnimalWithPawsAndTail</body>
+			<herdAnimal>false</herdAnimal>
+			<predator>true</predator>
+			<maxPreyBodySize>1.0</maxPreyBodySize>
+			<baseBodySize>0.6</baseBodySize>
+			<baseHungerRate>0.5</baseHungerRate>
+			<baseHealthScale>2</baseHealthScale>
+			<foodType>CarnivoreAnimal</foodType>
+			<leatherDef>Leather_Panthera</leatherDef>
+			<nuzzleMtbHours>18</nuzzleMtbHours>
+			<wildness>0.80</wildness>
+			<manhunterOnTameFailChance>0.01</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>0.01</manhunterOnDamageChance>
+			<gestationPeriodDays>26</gestationPeriodDays>
+			<litterSizeCurve>
+				<points>
+					<li>(0.5, 0)</li>
+					<li>(1, 1)</li>
+					<li>(2, 0.5)</li>
+					<li>(3, 1)</li>
+					<li>(3.5, 0)</li>
+				</points>
+			</litterSizeCurve>
+			<lifeExpectancy>11</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.25</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.5</minAge>
+					<soundWounded>Pawn_Cougar_Injured</soundWounded>
+					<soundDeath>Pawn_Cougar_Death</soundDeath>
+					<soundAngry>Pawn_Cougar_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+			<wildBiomes>
+				<Tundra>0.05</Tundra>
+				<BorealForest>0.05</BorealForest>
+			</wildBiomes>
+		</race>
+		<tradeTags>
+			<li>AnimalUncommon</li>
+			<li>AnimalFighter</li>
+		</tradeTags>
+	</ThingDef>
+
+	<PawnKindDef Name="CatGirl" ParentName="AnimalKindBase">
+		<defName>CatGirl</defName>
+		<label>Cat Girl</label>
+		<labelPlural>Cat Girls</labelPlural>
+		<race>CatGirl</race>
+		<combatPower>70</combatPower>
+		<ecoSystemWeight>0.50</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<label>Kitten Girl</label>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/pallascat/pallascat</texPath>
+					<drawSize>0.5</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/pallascat/dessicated_pallascat</texPath>
+					<drawSize>0.7</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/pallascat/pallascat</texPath>
+					<drawSize>1.4</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/pallascat/dessicated_pallascat</texPath>
+					<drawSize>1.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/pallascat/pallascat</texPath>
+					<drawSize>1.5</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.1)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/pallascat/dessicated_pallascat</texPath>
+					<drawSize>1.3</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>
